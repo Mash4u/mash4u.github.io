@@ -1,66 +1,208 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Muhammad Abdullahi | Academic Website</title>
-
     <style>
+        * {
+            box-sizing: border-box;
+        }
         body {
-            font-family: Arial, sans-serif;
+            font-family: Arial, Helvetica, sans-serif;
             margin: 0;
             background: #f5f7fa;
             color: #333;
             line-height: 1.7;
         }
-
         header {
             background: #142d4e;
             color: white;
             text-align: center;
-            padding: 55px 20px;
+            padding: 55px 20px 35px;
         }
-
         header h1 {
-            margin-bottom: 5px;
-            font-size: 36px;
+            margin: 0 0 5px;
+            font-size: 38px;
+            letter-spacing: 0.5px;
         }
-
+        header .subtitle {
+            font-size: 18px;
+            margin: 0 0 5px;
+            font-weight: 300;
+        }
+        header .affiliation {
+            font-size: 16px;
+            margin: 0 0 12px;
+            font-weight: 300;
+            opacity: 0.9;
+        }
+        header .profile-links a {
+            color: #a8d0ff;
+            text-decoration: none;
+            margin: 0 10px;
+            font-size: 14px;
+            border-bottom: 1px dashed #a8d0ff;
+            padding-bottom: 2px;
+        }
+        header .profile-links a:hover {
+            color: #fff;
+            border-bottom-color: #fff;
+        }
         nav {
             background: #0d2038;
             text-align: center;
-            padding: 15px;
+            padding: 14px 10px;
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.2);
         }
-
         nav a {
-            color: white;
+            color: #e0e9f5;
             text-decoration: none;
-            margin: 0 12px;
+            margin: 0 11px;
+            font-size: 14px;
+            font-weight: 500;
+            transition: color 0.2s;
         }
-
+        nav a:hover {
+            color: #fff;
+            text-decoration: underline;
+        }
         main {
-            max-width: 950px;
+            max-width: 1000px;
             margin: 35px auto;
-            padding: 25px;
+            padding: 0 25px;
+        }
+        section {
             background: white;
             border-radius: 10px;
+            padding: 28px 32px;
+            margin-bottom: 28px;
+            box-shadow: 0 2px 12px rgba(0,0,0,0.06);
         }
-
         h2 {
             color: #142d4e;
             border-bottom: 2px solid #dce4ed;
-            padding-bottom: 8px;
+            padding-bottom: 10px;
+            margin-top: 0;
+            font-size: 24px;
         }
-
+        h3 {
+            color: #1e3a5f;
+            font-size: 17px;
+            margin: 18px 0 6px;
+        }
+        h4 {
+            color: #2a4a6e;
+            font-size: 15px;
+            margin: 14px 0 4px;
+        }
         a {
             color: #1769aa;
+            text-decoration: none;
         }
-
+        a:hover {
+            text-decoration: underline;
+        }
+        ul {
+            margin: 6px 0 12px;
+            padding-left: 22px;
+        }
+        li {
+            margin-bottom: 5px;
+        }
+        .pub-list {
+            list-style-type: decimal;
+            padding-left: 22px;
+        }
+        .pub-list li {
+            margin-bottom: 12px;
+            font-size: 14.5px;
+            line-height: 1.55;
+        }
+        .doi-link {
+            font-size: 13px;
+            background: #eef4fb;
+            padding: 1px 8px;
+            border-radius: 10px;
+            color: #1769aa;
+            white-space: nowrap;
+        }
+        .doi-link:hover {
+            background: #dce8f5;
+            text-decoration: none;
+        }
+        .tag {
+            display: inline-block;
+            background: #e8eef6;
+            color: #142d4e;
+            padding: 2px 12px;
+            border-radius: 14px;
+            font-size: 12.5px;
+            margin: 3px 5px 3px 0;
+        }
+        .update-box {
+            background: #fdf6e3;
+            border-left: 5px solid #e6b422;
+            padding: 14px 20px;
+            border-radius: 6px;
+            margin-top: 10px;
+            font-size: 15px;
+        }
+        .update-box strong {
+            color: #8a6d1d;
+        }
+        .inst-block {
+            margin-bottom: 18px;
+        }
+        .inst-header {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 2px;
+        }
+        .inst-header strong {
+            font-size: 15.5px;
+        }
+        .inst-header .period {
+            font-size: 13.5px;
+            color: #666;
+            font-weight: 500;
+        }
+        .inst-sub {
+            font-size: 14px;
+            color: #555;
+            margin-bottom: 6px;
+        }
+        .ref-note {
+            font-size: 14px;
+            color: #555;
+        }
         footer {
             text-align: center;
             padding: 25px;
             color: #666;
+            font-size: 14px;
+        }
+        .contact-grid {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 18px 30px;
+        }
+        .contact-item {
+            font-size: 15px;
+        }
+        .contact-item strong {
+            color: #142d4e;
+        }
+        @media (max-width: 650px) {
+            header h1 { font-size: 28px; }
+            nav a { display: inline-block; margin: 4px 7px; font-size: 13px; }
+            section { padding: 20px 18px; }
+            .inst-header { flex-direction: column; }
         }
     </style>
 </head>
@@ -69,82 +211,428 @@
 
 <header>
     <h1>Muhammad Abdullahi</h1>
-    <p>PhD Researcher in Computational Mathematics</p>
-    <p>Central South University, China</p>
+    <p class="subtitle">PhD Researcher in Computational Mathematics</p>
+    <p class="affiliation">Central South University, Changsha, Hunan, P.R. China</p>
+    <div class="profile-links">
+        <a href="https://scholar.google.com/citations?user=QYw4qLcAAAAJ&hl=en" target="_blank">Google Scholar</a>
+        <a href="https://www.researchgate.net/profile/Muhammad-Abdullahi-18?ev=hdr_xprf" target="_blank">ResearchGate</a>
+        <a href="https://www.webofscience.com/wos/author/record/IZE-9053-2023" target="_blank">Web of Science</a>
+        <a href="mailto:4.msabdullahi@gmail.com">Email</a>
+    </div>
 </header>
 
 <nav>
     <a href="#about">About</a>
+    <a href="#update">Updates</a>
+    <a href="#education">Education</a>
     <a href="#research">Research</a>
     <a href="#publications">Publications</a>
     <a href="#experience">Experience</a>
+    <a href="#teaching">Teaching</a>
+    <a href="#conferences">Conferences</a>
+    <a href="#service">Service</a>
+    <a href="#awards">Awards</a>
+    <a href="#skills">Skills</a>
     <a href="#contact">Contact</a>
 </nav>
 
 <main>
 
+    <!-- ABOUT -->
     <section id="about">
         <h2>About Me</h2>
         <p>
-            Welcome to my academic website. I am Muhammad Abdullahi,
-            a researcher in Computational Mathematics at Central South
-            University. My research focuses on numerical optimization,
-            nonlinear equations and iterative methods.
+            Welcome to my academic website. I am <strong>Muhammad Abdullahi</strong>, a PhD researcher in
+            Computational Mathematics at <strong>Central South University (CSU)</strong>, Changsha, China.
+            I am also an Assistant Lecturer in the Department of Mathematics at
+            <strong>Sule Lamido University Kafin Hausa (SLUK)</strong>, Nigeria.
+        </p>
+        <p>
+            My research focuses on numerical optimization, nonsmooth and nonconvex optimization,
+            primal-dual splitting algorithms, monotone operator theory, derivative-free iterative
+            methods, conjugate-gradient methods, image recovery and machine learning. I develop and
+            analyse accelerated iterative algorithms, establish convergence properties (global
+            convergence, convergence rates and computational complexity), and implement them in
+            MATLAB and Python for large-scale benchmark problems.
+        </p>
+        <p>
+            I have published 26 journal articles in venues including
+            <em>Numerical Algorithms</em>, <em>Communications in Nonlinear Science and Numerical Simulation</em>,
+            <em>IMA Journal of Applied Mathematics</em>, <em>International Journal of Computer Mathematics</em>,
+            <em>AIMS Mathematics</em>, and <em>Scientific Reports</em>.
         </p>
     </section>
 
+    <!-- UPDATE -->
+    <section id="update">
+        <h2>Updates</h2>
+        <div class="update-box">
+            <strong>📢 Latest (2026):</strong> New paper published in <em>Scientific Reports</em>:
+            “A two-term hybrid method with restart strategy for signal processing and image recovery.”
+            <a href="https://doi.org/10.1038/s41598-026-55185-6" target="_blank">DOI</a>
+        </div>
+        <div class="update-box" style="margin-top: 14px;">
+            <strong>🎓 2025:</strong> Serving as a doctoral researcher at the School of Mathematics and Statistics, CSU.
+        </div>
+        <div class="update-box" style="margin-top: 14px;">
+            <strong>📝 Ongoing:</strong> Reviewing for <em>Franklin Open</em>, <em>Systems and Soft Computing</em>,
+            <em>Applied Soft Computing</em> and <em>Scientific African</em> (Elsevier).
+        </div>
+    </section>
+
+    <!-- EDUCATION -->
+    <section id="education">
+        <h2>Education</h2>
+        <div class="inst-block">
+            <div class="inst-header">
+                <strong>Central South University (CSU), Changsha, P.R. China</strong>
+                <span class="period">2023 – Till date</span>
+            </div>
+            <div class="inst-sub">PhD in Computational Mathematics</div>
+        </div>
+        <div class="inst-block">
+            <div class="inst-header">
+                <strong>Central South University (CSU), Changsha, P.R. China</strong>
+                <span class="period">2020 – 2023</span>
+            </div>
+            <div class="inst-sub">M.S. in Applied Mathematics</div>
+        </div>
+        <div class="inst-block">
+            <div class="inst-header">
+                <strong>Sule Lamido University Kafin Hausa (SLUK), Nigeria</strong>
+                <span class="period">2014 – 2018</span>
+            </div>
+            <div class="inst-sub">B.Sc. in Mathematics</div>
+        </div>
+    </section>
+
+    <!-- RESEARCH INTERESTS -->
     <section id="research">
         <h2>Research Interests</h2>
-        <ul>
-            <li>Numerical Optimization</li>
-            <li>Monotone Operator Theory</li>
-            <li>Large-Scale Nonlinear Equations</li>
-            <li>Derivative-Free Iterative Methods</li>
-            <li>Image Processing and Recovery</li>
-            <li>Machine Learning</li>
-        </ul>
+        <div>
+            <span class="tag">Numerical Optimization</span>
+            <span class="tag">Monotone Operator Theory</span>
+            <span class="tag">Derivative-Free Methods</span>
+            <span class="tag">Conjugate-Gradient Methods</span>
+            <span class="tag">Image Recovery</span>
+            <span class="tag">Machine Learning</span>
+            <span class="tag">Nonsmooth &amp; Nonconvex Optimization</span>
+            <span class="tag">Primal-Dual Splitting Algorithms</span>
+            <span class="tag">Large-Scale Nonlinear Equations</span>
+            <span class="tag">Signal Processing</span>
+        </div>
+        <p style="margin-top: 14px; font-size: 14.5px; color: #444;">
+            Key methodological interests include accelerated iterative algorithms, inertial and
+            double-step-length methods, spectral conjugate-gradient projection methods, global and
+            Q-linear convergence analysis, and high-performance computing for large-scale problems.
+            Applications span image restoration, signal recovery, motion control, data-driven
+            optimization and medical image analysis.
+        </p>
     </section>
 
+    <!-- PUBLICATIONS -->
     <section id="publications">
-        <h2>Selected Publications</h2>
-        <p>
-            A selection of my research publications is available on
-            <a href="https://scholar.google.com/citations?user=QYw4qLcAAAAJ&hl=en">
-                Google Scholar
-            </a>.
+        <h2>Journal Publications (26)</h2>
+        <p style="font-size: 14px; color: #555; margin-top: -6px;">
+            All publications with DOI links. Full list also available on
+            <a href="https://scholar.google.com/citations?user=QYw4qLcAAAAJ&hl=en" target="_blank">Google Scholar</a>.
         </p>
+        <ol class="pub-list">
+            <li>
+                <strong>Abdullahi, M.</strong>, Sarkinbai, M. S., Abubakar, A. B., Al-Yaari, A., &amp; Siamakani, S. Y. M. (2026).
+                A two-term hybrid method with restart strategy for signal processing and image recovery.
+                <em>Scientific Reports</em>.
+                <a class="doi-link" href="https://doi.org/10.1038/s41598-026-55185-6" target="_blank">DOI</a>
+            </li>
+            <li>
+                Al-Yaari, A., Deng, Y., &amp; <strong>Abdullahi, M.</strong> (2026).
+                Generative latent optimization with variational regularization for high-quality image synthesis and inverse problems.
+                <em>International Journal of Computer Mathematics</em>, 1–26.
+                <a class="doi-link" href="https://doi.org/10.1080/00207160.2026.2680210" target="_blank">DOI</a>
+            </li>
+            <li>
+                Sarkinbai, M. S., <strong>Abdullahi, M.</strong>, Abubakar, A. B., &amp; Siamakani, S. Y. M. (2026).
+                A modified restart strategy for a derivative-free projection method with three-term conjugate-gradient direction for monotone equations and application.
+                <em>Results in Control and Optimization</em>, 100733.
+                <a class="doi-link" href="https://doi.org/10.1016/j.rico.2026.100733" target="_blank">DOI</a>
+            </li>
+            <li>
+                <strong>Abdullahi, M.</strong>, Saleh, M. A., Siamakani, S. Y. M., Almaymuni, A. Z., Abubakar, A. B., Halilu, A. S., &amp; Ibrahim, S. M. (2026).
+                An inertial three-term conjugate gradient projection method with applications.
+                <em>Journal of Mathematics</em>, 2026(1), 5663059.
+                <a class="doi-link" href="https://doi.org/10.1155/jom/5663059" target="_blank">DOI</a>
+            </li>
+            <li>
+                <strong>Abdullahi, M.</strong>, Halilu, A. S., &amp; Muhammed, A. M. (2026).
+                Accelerated double step-length method for solving monotone nonlinear equations with convex-constraint and application.
+                <em>AIMS Mathematics</em>, 1–65.
+                <a class="doi-link" href="https://www.aimspress.com/article/doi/10.3934/math.2026448" target="_blank">DOI</a>
+            </li>
+            <li>
+                <strong>Abdullahi, M.</strong>, Pan, K., Halilu, A. S., Abubakar, A. B., Tunde, T. A., &amp; Al-Yaari, A. (2026).
+                A new spectral conjugate gradient method for convex constrained monotone nonlinear equations with application to image restoration.
+                <em>Japan Journal of Industrial and Applied Mathematics</em>.
+                <a class="doi-link" href="https://doi.org/10.1007/s13160-026-00778-x" target="_blank">DOI</a>
+            </li>
+            <li>
+                <strong>Abdullahi, M.</strong>, Al-Yaari, A., Pan, K., Abubakar, A. B., &amp; Halilu, A. S. (2026).
+                An inertial double-step-length-based method for constrained nonlinear equations with applications.
+                <em>Computational and Applied Mathematics</em>, 45(8), 340.
+                <a class="doi-link" href="https://link.springer.com/article/10.1007/s40314-026-03748-8" target="_blank">DOI</a>
+            </li>
+            <li>
+                Al-Yaari, A., <strong>Abdullahi, M.</strong>, &amp; Abdullahi, U. A. (2026).
+                Generative machine learning models for image synthesis: Advances, challenges, and future directions.
+                <em>Machine Learning with Applications</em>, 100895.
+                <a class="doi-link" href="https://doi.org/10.1016/j.mlwa.2026.100895" target="_blank">DOI</a>
+            </li>
+            <li>
+                Al-Yaari, A., Deng, Y., <strong>Abdullahi, M.</strong>, &amp; Shakeel, M. (2026).
+                Coevolutionary algorithms in generative adversarial networks for medical image analysis with limited labels.
+                <em>Physica Scripta</em>.
+                <a class="doi-link" href="https://iopscience.iop.org/article/10.1088/1402-4896/ae364b" target="_blank">DOI</a>
+            </li>
+            <li>
+                Sulaiman, A., Abubakar, A. B., <strong>Abdullahi, M.</strong>, Yayangida, S. A., &amp; Masu, S. B. (2026).
+                A new class of hybrid spectral conjugate gradient approach for unconstrained optimization and motion control problems.
+                <em>Bangmod International Journal of Mathematical and Computational Science</em>, 21–42.
+                <a class="doi-link" href="https://doi.org/10.58715/bangmodjmcs.2026.12.2" target="_blank">DOI</a>
+            </li>
+            <li>
+                <strong>Abdullahi, M.</strong>, Al-Yaari, A., Abubakar, A. B., Halilu, A. S., &amp; Muhammed, A. M. (2025).
+                An effective double-direction method for solving convex-constrained nonlinear equations with image restoration.
+                <em>AIMS Mathematics</em>, 1–65.
+                <a class="doi-link" href="https://www.aimspress.com/article/doi/10.3934/math.20251273" target="_blank">DOI</a>
+            </li>
+            <li>
+                <strong>Abdullahi, M.</strong>, Pan, K., Halilu, A. S., &amp; Abubakar, A. B. (2025).
+                An accelerated derivative-free method using Picard-Krasnoselskii iterative process with applications in motion control.
+                <em>International Journal of Computer Mathematics</em>, 1–25.
+                <a class="doi-link" href="https://doi.org/10.1080/00207160.2025.2593933" target="_blank">DOI</a>
+            </li>
+            <li>
+                <strong>Abdullahi, M.</strong>, Pan, K., Halilu, A. S., Abubakar, A. B., &amp; Zakari, F. I. (2025).
+                Two accelerated double-direction methods for convex-constrained nonlinear equations with applications.
+                <em>Numerical Algorithms</em>, 1–28.
+                <a class="doi-link" href="https://doi.org/10.1007/s11075-025-02242-2" target="_blank">DOI</a>
+            </li>
+            <li>
+                <strong>Abdullahi, M.</strong>, Halilu, A. S., Pan, K., &amp; Abubakar, A. B. (2025).
+                Two double-direction methods for convex-constrained nonlinear monotone equations with image recovery of spherical parts.
+                <em>Communications in Nonlinear Science and Numerical Simulation</em>, 109315.
+                <a class="doi-link" href="https://doi.org/10.1016/j.cnsns.2025.109315" target="_blank">DOI</a>
+            </li>
+            <li>
+                Abbass, G., Chen, H., <strong>Abdullahi, M.</strong>, Halilu, A. S., &amp; Ahmed, M. (2025).
+                Hybrid accelerated double step length approach for convex constrained nonlinear monotone equations with applications.
+                <em>IMA Journal of Applied Mathematics</em>, 90, 75–98.
+                <a class="doi-link" href="https://doi.org/10.1093/imamat/hxaf009" target="_blank">DOI</a>
+            </li>
+            <li>
+                <strong>Abdullahi, M.</strong>, Kejia, P., Abubakar, A. B., &amp; Halilu, A. S. (2025).
+                An inertial spectral conjugate gradient method for monotone nonlinear equations with applications.
+                <em>Mathematical Methods in the Applied Sciences</em>, 1–16.
+                <a class="doi-link" href="https://doi.org/10.1002/mma.10906" target="_blank">DOI</a>
+            </li>
+            <li>
+                Ebenezer, N., <strong>Abdullahi, M.</strong>, &amp; Halilu, A. S. (2024).
+                Modification of a conjugate gradient approach for convex-constrained nonlinear monotone equations with applications in signal recovery.
+                <em>Communications in Nonlinear Science and Numerical Simulation</em>, 136, 108079.
+                <a class="doi-link" href="https://doi.org/10.1016/j.cnsns.2024.108079" target="_blank">DOI</a>
+            </li>
+            <li>
+                Salihu, S. B., Halilu, A. S., <strong>Abdullahi, M.</strong>, Ahmed, K., Mehta, P., &amp; Murtala, S. (2024).
+                An improved spectral conjugate gradient projection method for monotone nonlinear equations with application.
+                <em>Journal of Applied Mathematics and Computing</em>, 1–37.
+                <a class="doi-link" href="https://doi.org/10.1007/s12190-024-02121-4" target="_blank">DOI</a>
+            </li>
+            <li>
+                Abbass, G., Chen, H., <strong>Abdullahi, M.</strong>, &amp; Muhammad, A. B. (2024).
+                An efficient projection algorithm for large-scale system of monotone nonlinear equations with applications in signal recovery.
+                <em>Journal of Industrial and Management Optimization</em>, 20(11), 3580–3595.
+                <a class="doi-link" href="https://doi.org/10.3934/jimo.2024066" target="_blank">DOI</a>
+            </li>
+            <li>
+                <strong>Abdullahi, M.</strong>, Abubakar, A. B., Sulaiman, A., &amp; Chotpitayasunon, P. (2024).
+                An efficient projection algorithm for solving convex-constrained monotone operator equations and sparse signal reconstruction problems.
+                <em>Journal of Analysis</em>, 1–20.
+                <a class="doi-link" href="https://doi.org/10.1007/s41478-024-00757-w" target="_blank">DOI</a>
+            </li>
+            <li>
+                Abubakar, A. B., Ibrahim, A. H., <strong>Abdullahi, M.</strong>, Aphane, M., &amp; Jiawei, C. (2024).
+                A sufficient descent LS-PRP-BFGS-like method for solving nonlinear monotone equations with application to image restoration.
+                <em>Numerical Algorithms</em>, 96, 1423–1464.
+                <a class="doi-link" href="https://doi.org/10.1007/s11075-023-01673-z" target="_blank">DOI</a>
+            </li>
+            <li>
+                Abbass, G., Chen, H., <strong>Abdullahi, M.</strong>, Baba, M. A., &amp; Musa, S. (2023).
+                A projection method for solving monotone nonlinear equations with application.
+                <em>Physica Scripta</em>, 98(11), 115250.
+                <a class="doi-link" href="https://iopscience.iop.org/article/10.1088/1402-4896/acfc70" target="_blank">DOI</a>
+            </li>
+            <li>
+                <strong>Abdullahi, M.</strong>, Abubakar, A. B., &amp; Salihu, S. B. (2023).
+                Global convergence via modified self-adaptive approach for solving constrained monotone nonlinear equations with application to signal recovery problems.
+                <em>RAIRO-Operations Research</em>, 57(5), 2561–2584.
+                <a class="doi-link" href="https://doi.org/10.1051/ro/2023099" target="_blank">DOI</a>
+            </li>
+            <li>
+                <strong>Abdullahi, M.</strong>, Abubakar, A. B., &amp; Muangchoo, K. (2023).
+                Modified three-term derivative-free projection method for solving nonlinear monotone equations with application.
+                <em>Numerical Algorithms</em>, 95, 1459–1474.
+                <a class="doi-link" href="https://doi.org/10.1007/s11075-023-01616-8" target="_blank">DOI</a>
+            </li>
+            <li>
+                <strong>Abdullahi, M.</strong>, Abubakar, A. B., Feng, Y., &amp; Liu, J. (2023).
+                Comment on: “A derivative-free iterative method for nonlinear monotone equations with convex constraints”.
+                <em>Numerical Algorithms</em>, 94, 1551–1560.
+                <a class="doi-link" href="https://doi.org/10.1007/s11075-023-01546-5" target="_blank">DOI</a>
+            </li>
+            <li>
+                <strong>Abdullahi, M.</strong>, Halilu, A., Awwal, A., &amp; Pakkaranang, N. (2021).
+                On efficient matrix-free method via quasi-Newton approach for solving system of nonlinear equations.
+                <em>Advances in the Theory of Nonlinear Analysis and its Application</em>, 5(4), 568–579.
+                <a class="doi-link" href="https://atnaea.org/index.php/journal/article/view/225" target="_blank">DOI</a>
+            </li>
+        </ol>
     </section>
 
+    <!-- RESEARCH EXPERIENCE -->
     <section id="experience">
-        <h2>Academic Experience</h2>
-        <p>
-            Assistant Lecturer, Department of Mathematics,
-            Sule Lamido University, Nigeria.
-        </p>
-        <p>
-            Research Assistant, Centre for High Performance Computing,
-            Central South University, China.
-        </p>
+        <h2>Research Experience</h2>
+
+        <div class="inst-block">
+            <div class="inst-header">
+                <strong>Doctoral Researcher — School of Mathematics and Statistics, CSU</strong>
+                <span class="period">2025 – Till date</span>
+            </div>
+            <div class="inst-sub">Supervisor: Prof. Hebai Chen</div>
+            <ul>
+                <li>Conduct advanced research in numerical optimization, nonsmooth and nonconvex optimization, and primal-dual splitting algorithms for large-scale optimization problems.</li>
+                <li>Develop and analyse accelerated iterative algorithms, establishing global convergence, convergence rates and computational complexity.</li>
+                <li>Design and implement optimization algorithms in MATLAB and Python; perform extensive numerical experiments on large-scale benchmarks.</li>
+                <li>Apply optimization techniques to image restoration, machine learning, signal processing and data-driven optimization.</li>
+                <li>Prepare manuscripts for high-impact journals and present findings at seminars and conferences.</li>
+                <li>Collaborate with supervisors and researchers on interdisciplinary projects.</li>
+            </ul>
+        </div>
+
+        <div class="inst-block">
+            <div class="inst-header">
+                <strong>Research Assistant — Centre for High Performance Computing, CSU</strong>
+                <span class="period">2020 – 2023</span>
+            </div>
+            <ul>
+                <li>Established global and Q-linear convergence rates of proposed algorithms under standard conditions.</li>
+                <li>Ensured the sufficient descent property in the search direction of the algorithm.</li>
+                <li>Performed large-scale numerical computations using high-performance computing to demonstrate efficacy against existing methods.</li>
+                <li>Applied the algorithms to solve practical application problems using HPC.</li>
+            </ul>
+        </div>
+
+        <div class="inst-block">
+            <div class="inst-header">
+                <strong>Research Fellow — Numerical Optimization Research Group, Bayero University Kano (BUK), Nigeria</strong>
+                <span class="period">2020 – 2022</span>
+            </div>
+            <div class="inst-sub">Supervisor: Prof. A. B. Abubakar — Iterative Algorithms for Solving Large-scale Systems of Nonlinear Equations with Applications</div>
+            <ul>
+                <li>Conceptualized and drafted manuscripts; demonstrated convergence, analysed proofs, prepared experiments, and created tables and figures.
+                    <a href="https://doi.org/10.1007/s11075-023-01546-5" target="_blank">View</a></li>
+                <li>Discussed convergence, analysed proofs, and prepared image recovery experiments.
+                    <a href="https://doi.org/10.1007/s11075-023-01616-8" target="_blank">View</a></li>
+            </ul>
+        </div>
     </section>
 
-    <section id="contact">
-        <h2>Contact</h2>
-        <p>Email: Your email address</p>
-        <p>
-            <a href="https://www.researchgate.net/profile/Muhammad-Abdullahi-18">
-                ResearchGate
-            </a> |
-            <a href="https://scholar.google.com/citations?user=QYw4qLcAAAAJ&hl=en">
-                Google Scholar
-            </a>
-        </p>
+    <!-- TEACHING EXPERIENCE -->
+    <section id="teaching">
+        <h2>Teaching Experience</h2>
+
+        <div class="inst-block">
+            <div class="inst-header">
+                <strong>Assistant Lecturer — Sule Lamido University Kafin Hausa (SLUK), Nigeria</strong>
+                <span class="period">Dec 2019 – Till date</span>
+            </div>
+            <ul>
+                <li>Delivered tailored tutoring sessions to undergraduates in Calculus I, Calculus II and Algebra.</li>
+                <li>Developed and curated detailed lecture materials and supplementary resources.</li>
+                <li>Assisted faculty by grading assignments, quizzes and examinations, providing timely constructive feedback.</li>
+                <li>Engaged with students during office hours to clarify complex topics and assist in assessment preparation.</li>
+            </ul>
+        </div>
+
+        <div class="inst-block">
+            <div class="inst-header">
+                <strong>Assistant Instructor — National Youth Service Corps (NYSC), Kano University of Science &amp; Technology, Wudil (KUST), Nigeria</strong>
+                <span class="period">Nov 2018 – Nov 2019</span>
+            </div>
+            <ul>
+                <li>Assisted in supervising and invigilating students during university examinations.</li>
+                <li>Collaborated with faculty to design visually engaging poster presentations for the department's weekly seminar series.</li>
+                <li>Supported the department by grading student assignments, quizzes and examinations.</li>
+            </ul>
+        </div>
     </section>
 
-</main>
+    <!-- CONFERENCES & WORKSHOPS -->
+    <section id="conferences">
+        <h2>Conference Presentations &amp; Workshops</h2>
 
-<footer>
-    <p>© 2026 Muhammad Abdullahi. All rights reserved.</p>
-</footer>
+        <h3>Conference Presentations</h3>
+        <ol class="pub-list">
+            <li>
+                <strong>Abdullahi, M.</strong> (2021). An improved conjugate gradient method for solving a system of nonlinear equations.
+                <em>57th Annual Conference of the Mathematical Association of Nigeria (MAN)</em>, Kano, August 2021.
+                <a href="https://drive.google.com/file/d/1ts4xiLALpibcg_iUWq7tD9G7dwooPzf0/view?usp=sharing" target="_blank">View</a>
+            </li>
+            <li>
+                <strong>Abdullahi, M.</strong> (2018). An effective matrix-free method via quasi-Newton update for solving large-scale system of nonlinear equations.
+                <em>37th Annual National Conference of the Nigerian Mathematical Society (NMS)</em>, Kano, May 8–11, 2018.
+                <a href="https://drive.google.com/file/d/16dzyqBWA_j8UGFwyIKGnxlSD7b0Hy9eX/view?usp=sharing" target="_blank">View</a>
+            </li>
+        </ol>
 
-</body>
-</html>
+        <h3>Workshops &amp; Webinars</h3>
+        <ol class="pub-list">
+            <li>
+                International Webinar on Intelligence Optimization Techniques and Their Real-Life Applications.
+                Department of Mathematics, Punjabi University, Patiala, India. Feb 2022.
+                <a href="https://drive.google.com/file/d/1WdUMqIrGdW5yWmnHRhSkGPWEOKhCv4D9/view?usp=sharing" target="_blank">View</a><br>
+                <em>Knowledge gain:</em> Genetic Algorithms (GA), Particle Swarm Optimization (PSO), and applications in energy management, logistics and system design.
+            </li>
+            <li>
+                Numerical and Analytical Techniques in Engineering Problems.
+                Department of Mathematics, Institute of Science and Technology, Tamil Nadu, India. Nov 2022.
+                <a href="https://drive.google.com/file/d/1FHktRJfoLmebrhS7d7bId79nbwC7shmn/view?usp=sharing" target="_blank">View</a><br>
+                <em>Knowledge gain:</em> Alternative numerical techniques for nonlinear equations, integration, and real-world applications.
+            </li>
+            <li>
+                Nonlinear Operator Theory, Convex Optimization, and Partial Differential Equations.
+                Institute of Mathematics, African University of Science and Technology, Abuja. Online 2022.<br>
+                <em>Knowledge gain:</em> Advanced nonlinear operator theory, convex optimization, and applications to partial differential equations.
+            </li>
+            <li>
+                Numerical and Analytical Techniques in Engineering Problems.
+                Department of Mathematics, Institute of Science and Technology, Tamil Nadu, India. Nov 2020.
+                <a href="https://drive.google.com/file/d/1SCrQf7u-OX2DGGoOx74PuJID-u2qfI2o/view?usp=sharing" target="_blank">View</a><br>
+                <em>Knowledge gain:</em> Numerical techniques for nonlinear equations, integration, and Runge–Kutta methods.
+            </li>
+            <li>
+                International Forum on The Current Advances in Partial Least Squares Structural Equation Modeling &amp; Methodological Matters. Emerald Publishing. Jun 2020.
+                <a href="https://drive.google.com/file/d/1jZs3Z8d3IifSdMJ59GOhO7MRqhKUY6Np/view?usp=sharing" target="_blank">View</a><br>
+                <em>Knowledge gain:</em> Latest methodological advancements in PLS-SEM and application to complex models.
+            </li>
+        </ol>
+    </section>
+
+    <!-- ACADEMIC SERVICE & LEADERSHIP -->
+    <section id="service">
+        <h2>Academic Service &amp; Leadership</h2>
+
+        <h3>Journal Reviewing</h3>
+        <ul>
+            <li>Reviewer — <em>Franklin Open</em>, Elsevier (2024 – Till date).
+                <a href="https://drive.google.com/file/d/1crclAvBh1iPQA0GAi9g7HHGn8v_-Mr87/view?usp=sharing" target="_blank">View</a></li>
+            <li>Reviewer — <em>Systems and Soft Computing</em>, Elsevier (2024 – Till date).
+                <a href="https://drive.google.com/file/d/1aZhvrvZ
